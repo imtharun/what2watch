@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-black {
+  background-color: #000;
+}
+
+.two:hover span {
+  width: 50%;
+}
