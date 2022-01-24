@@ -15,15 +15,18 @@ export default function Header() {
 
   return (
     <React.Fragment>
-      <header className="flex p-2 justify-between">
+      <header className="w-full flex p-2 justify-between">
         <div className="flex ">
           <div>
-            <h1 className="font-gothic text-2xl font-semibold mx-2 text-red-400">
+            <h1 className="font-gothic hidden md:block md:text-2xl font-semibold mx-2 text-red-400">
               WHAT2WATCH
             </h1>
+            <h1 className="font-gothic md:hidden text-2xl font-semibold mr-1 text-red-400">
+              W2W
+            </h1>
           </div>
-          <div className="w-44 text-white mt-1 invisible md:visible">
-            <ul className="flex justify-around">
+          <div className="text-white mt-1 hidden md:block">
+            <ul className="flex justify-around md:w-44">
               <li>
                 <span className="relative w-max two">
                   <a href="/">Movies </a>
@@ -42,9 +45,9 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="mr-5">
+        <div className="md:mr-5">
           <form onSubmit={submitHandler}>
-            <div className="relative text-gray-600">
+            <div className="relative  text-gray-600">
               <input
                 ref={inputRef}
                 type="text"
@@ -52,11 +55,11 @@ export default function Header() {
                 value={inputMovie}
                 onChange={changeHandler}
                 name="serch"
-                className="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none"
+                className="bg-white h-8 md:h-10 px-5 pr-1 md:pr-10 rounded-full text-sm focus:outline-none"
               />
               <button
                 type="submit"
-                className="absolute right-0 top-0 mt-3 mr-4"
+                className="absolute right-0 top-0 mt-2 md:mt-3 mr-4"
               >
                 <svg
                   className="h-4 w-4 fill-current"
