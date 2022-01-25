@@ -21,8 +21,10 @@ export default function Slider() {
     const youtubeFun = async () => {
       if (movie?.id) {
         const data = await fetch(
-          `http://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=544cc1a83bc6fb204d6f8af527c90773`
-        ).then((req) => req.json());
+          `https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=544cc1a83bc6fb204d6f8af527c90773`
+        )
+          .then((req) => req.json())
+          .catch((err) => console.log(err));
         const movieArray = data.results;
         movieArray.forEach((ele) => {
           if (
