@@ -43,9 +43,9 @@ export default function Slider() {
   }, [movie.id]);
 
   return (
-    <section className=" text-white tall:flex">
+    <section className=" text-white  tall:flex">
       {key && (
-        <div className="mx-2 py-8">
+        <div className=" mx-2 py-8">
           <h1 className="text-white text-xl text-center font-semibold mb-2">
             Watch Preview
           </h1>
@@ -66,13 +66,13 @@ export default function Slider() {
         {movie?.backdrop_path && (
           <a href="/">
             <img
-              className="w-full h-full mx-2"
+              className="w-full h-full"
               src={`https://image.tmdb.org/t/p/original${movie?.backdrop_path}`}
               alt="Movie Slide"
             />
           </a>
         )}
-        <span className="font-bold  bottom-5 right-10 absolute">
+        <span className="font-bold text-2xl  bottom-5 right-10 absolute">
           {movie?.name || movie?.title}
         </span>
       </div>

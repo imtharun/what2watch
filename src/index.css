@@ -11,3 +11,7 @@
 .two:hover span {
   width: 50%;
 }
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
