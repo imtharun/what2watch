@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const [inputMovie, setInputMovie] = useState("");
@@ -12,6 +13,8 @@ export default function Header() {
   const submitHandler = function (event) {
     event.preventDefault();
   };
+
+  let isActive = "";
 
   return (
     <React.Fragment>
@@ -29,14 +32,19 @@ export default function Header() {
             <ul className="flex justify-around  md:w-44">
               <li>
                 <span className="relative w-max two">
-                  <a href="/">Movies </a>
+                  <NavLink
+                    to="/movie"
+                    className={(arg) => (isActive = arg.isActive)}
+                  >
+                    Movies{" "}
+                  </NavLink>
                   <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-red-400"></span>
                   <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-red-400"></span>
                 </span>
               </li>
               <li>
                 <span className="relative w-max two">
-                  <a href="/">Tv Series </a>
+                  <NavLink to="/tvseries">Tv Series </NavLink>
                   <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-red-400"></span>
                   <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-red-400"></span>
                 </span>
