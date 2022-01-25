@@ -15,37 +15,37 @@ export default function Header() {
 
   return (
     <React.Fragment>
-      <header className="w-full flex p-2 justify-between">
+      <header className="w-full flex p-2 justify-between mt-[0.25rem]">
         <div className="flex ">
           <div>
-            <h1 className="font-gothic hidden md:block md:text-2xl font-semibold mx-2 text-red-400">
+            <h1 className="font-monts hidden md:block md:text-2xl font-semibold mx-2 text-red-400">
               WHAT2WATCH
             </h1>
-            <h1 className="font-gothic md:hidden text-2xl font-semibold mr-1 text-red-400">
+            <h1 className="font-monts md:hidden text-2xl font-semibold mr-1 text-red-400">
               W2W
             </h1>
           </div>
           <div className="text-white mt-1 hidden md:block">
-            <ul className="flex justify-around md:w-44">
+            <ul className="flex justify-around  md:w-44">
               <li>
                 <span className="relative w-max two">
                   <a href="/">Movies </a>
-                  <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-red-400"></span>
-                  <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-red-400"></span>
+                  <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-red-400"></span>
+                  <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-red-400"></span>
                 </span>
               </li>
               <li>
                 <span className="relative w-max two">
                   <a href="/">Tv Series </a>
-                  <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-red-400"></span>
-                  <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-red-400"></span>
+                  <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-red-400"></span>
+                  <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-red-400"></span>
                 </span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="md:mr-5">
+        <div className="md:mr-2">
           <form onSubmit={submitHandler}>
             <div className="relative  text-gray-600">
               <input

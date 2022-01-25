@@ -3,8 +3,13 @@ module.exports = {
   theme: {
     fontFamily: {
       gothic: ["Nanum Gothic", " sans-serif"],
+      monts: ["Montserrat", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      screens: {
+        tall: "800px",
+      },
+    },
   },
   plugins: [],
 };
