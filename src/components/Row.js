@@ -7,13 +7,10 @@ export default function Row(props) {
   useEffect(() => {
     const fetch = async () => {
       const data = await axios.get(props.request);
-      console.log(data.data.results);
       setMovies(data.data.results);
     };
     fetch();
   }, [props.request]);
-
-  console.log(movies);
 
   return (
     <section className="text-white ml-4 my-4 font-normal text-lg ">
@@ -25,7 +22,7 @@ export default function Row(props) {
           movies.map((ele) => {
             return (
               <Card
-                id={ele.id}
+                key={ele.id}
                 image={ele.poster_path}
                 name={ele?.title || ele?.name || ele?.original_title}
                 date={ele.release_date}

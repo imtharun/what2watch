@@ -14,7 +14,8 @@ export default function Header() {
     event.preventDefault();
   };
 
-  let isActive = "";
+  const [isActiveMovie, setIsActiveMovie] = useState(false);
+  const [isActiveSeries, setIsActiveSeries] = useState(false);
 
   return (
     <React.Fragment>
@@ -34,19 +35,42 @@ export default function Header() {
                 <span className="relative w-max two">
                   <NavLink
                     to="/movie"
-                    className={(arg) => (isActive = arg.isActive)}
+                    className={(arg) => setIsActiveMovie(arg.isActive)}
                   >
-                    Movies{" "}
+                    Movies
                   </NavLink>
-                  <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-red-400"></span>
-                  <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-red-400"></span>
+                  <span
+                    className={`absolute -bottom-1 w-${
+                      isActiveMovie ? 7 : 0
+                    } left-1/2 transition-all h-1 
+                      bg-red-400`}
+                  ></span>
+                  <span
+                    className={`absolute -bottom-1 w-${
+                      isActiveMovie ? 7 : 0
+                    } right-1/2 transition-all h-1 
+                      bg-red-400`}
+                  ></span>
                 </span>
               </li>
               <li>
                 <span className="relative w-max two">
-                  <NavLink to="/tvseries">Tv Series </NavLink>
-                  <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-red-400"></span>
-                  <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-red-400"></span>
+                  <NavLink
+                    to="/tvseries"
+                    className={(arg) => setIsActiveSeries(arg.isActive)}
+                  >
+                    Tv Series
+                  </NavLink>
+                  <span
+                    className={`absolute -bottom-1 left-1/2 w-${
+                      isActiveSeries ? 7 : 0
+                    } transition-all h-1 bg-red-400`}
+                  ></span>
+                  <span
+                    className={`absolute -bottom-1 right-1/2 w-${
+                      isActiveSeries ? 7 : 0
+                    } transition-all h-1 bg-red-400`}
+                  ></span>
                 </span>
               </li>
             </ul>
