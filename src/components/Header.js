@@ -25,9 +25,25 @@ export default function Header() {
             <h1 className="font-monts hidden md:block md:text-2xl font-semibold mx-2 text-red-400">
               WHAT2WATCH
             </h1>
-            <h1 className="font-monts md:hidden text-2xl font-semibold mr-1 text-red-400">
-              W2W
-            </h1>
+            <div className="flex itmes-center md:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 md:hidden cursor-pointer"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#fff"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <h1 className="font-monts ml-2 -mt-1 md:hidden text-2xl font-semibold mr-1 text-red-400">
+                W2W
+              </h1>
+            </div>
           </div>
           <div className="text-white mt-1 hidden md:block">
             <ul className="flex justify-around  md:w-44">

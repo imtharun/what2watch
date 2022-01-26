@@ -61,7 +61,7 @@ export default function Slider(props) {
         </div>
       )}
 
-      <div className="relative text-white md:w-[55rem] md:h-[350px] md:mx-auto overflow-hidden rounded-3xl mt-3">
+      <div className="relative text-white tall:w-[50rem] tall:h-[350px] md:mx-auto overflow-hidden rounded-3xl mt-3">
         {movie?.backdrop_path && (
           <a href="/">
             <img

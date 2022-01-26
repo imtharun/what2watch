@@ -1,8 +1,15 @@
 import React from "react";
 
 export default function Card(props) {
+  const clickHandler = function (e) {
+    console.log(e.target);
+  };
+
   return (
-    <div className="relative bg-white mr-2 my-2 rounded-md">
+    <div
+      className="relative bg-white mr-2 my-2 rounded-md cursor-pointer"
+      onClick={clickHandler}
+    >
       <div className="w-44 m-2">
         <img
           className="rounded-md"

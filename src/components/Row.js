@@ -17,7 +17,7 @@ export default function Row(props) {
       <div>
         <h1>{props.title}</h1>
       </div>
-      <div className="cards flex overflow-x-scroll my-3">
+      <div className="cards flex overflow-x-scroll my-3 ">
         {movies &&
           movies.map((ele) => {
             return (
