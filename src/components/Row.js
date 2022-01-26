@@ -23,6 +23,7 @@ export default function Row(props) {
             return (
               <Card
                 key={ele.id}
+                star={ele.vote_average}
                 image={ele.poster_path}
                 name={ele?.title || ele?.name || ele?.original_title}
                 date={ele.release_date}

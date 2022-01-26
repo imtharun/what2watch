@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from "react";
 import axios from "./../axios";
-import request from "./../requests";
 
-export default function Slider() {
+export default function Slider(props) {
   const [movie, setMovie] = useState({});
   const [key, setKey] = useState("");
 
   useEffect(() => {
     const trendingMovieGetter = async () => {
-      const data = await axios.get(request.fetchTrending);
+      const data = await axios.get(props.request);
       setMovie(
         data.data.results[Math.floor(Math.random() * data.data.results.length)]
       );
       return data;
     };
     trendingMovieGetter();
-  }, []);
+  }, [props.request]);
 
   useEffect(() => {
     const youtubeFun = async () => {

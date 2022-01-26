@@ -6,7 +6,7 @@ import requests from "../requests";
 export default function Movie() {
   return (
     <article>
-      <Slider />
+      <Slider request={requests.fetchTrending} />
       <Row request={requests.fetchTopRated} title="Top Rated" />
       <Row request={requests.fetchActionMovies} title="Action movies" />
       <Row request={requests.fetchDocumentaries} title="Documentaries" />

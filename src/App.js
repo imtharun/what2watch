@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Movie from "./components/Movie";
 import { Routes, Route, Navigate } from "react-router-dom";
 import "./index.css";
+import TvShow from "./components/TvShow";
 
 export default function App() {
   return (
@@ -22,7 +23,7 @@ export default function App() {
         element={
           <main>
             <Header />
-            <p className="text-white">This page will contain TV series</p>
+            <TvShow />
           </main>
         }
       />
