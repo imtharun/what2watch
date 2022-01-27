@@ -18,7 +18,7 @@ export default function Card(props) {
         />
       </div>
       <div className="text-black max-w-[13rem] text-center z-50">
-        <h1 className="text-black text-sm p-3 font-medium">{props.name}</h1>
+        <h1 className="text-black text-sm p-3 ">{props.name}</h1>
       </div>
       <span className="text-black  -top-2 -right-1 text-sm px-1 rounded-lg bg-blue-400 absolute">
         {props.star}

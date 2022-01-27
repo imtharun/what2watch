@@ -27,7 +27,7 @@ export default function Slider(props) {
         const movieArray = data.results;
         movieArray.forEach((ele) => {
           if (
-            ele.type === "Trailer" ||
+            (ele.type && ele.type === "Trailer") ||
             ele.type === "Teaser" ||
             ele.type === "Clip" ||
             ele.type === "Featurette" ||
