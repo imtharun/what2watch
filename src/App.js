@@ -1,15 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import Movie from "./components/Movie";
 import TvShow from "./components/TvShow";
 import Search from "./components/Search";
 import "./index.css";
-import { HamContext } from "./HamContextProvider";
 
 export default function App() {
-  const { hamActive } = useContext(HamContext);
-  // console.log(hamActive, hamHandler);
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/movie" />} />
