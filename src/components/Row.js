@@ -5,11 +5,13 @@ import Card from "./Card";
 export default function Row(props) {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
-    const fetch = async () => {
-      const data = await axios.get(props.request);
-      setMovies(data.data.results);
-    };
-    fetch();
+    if (props.request) {
+      const fetch = async () => {
+        const data = await axios.get(props.request);
+        setMovies(data.data.results);
+      };
+      fetch();
+    }
   }, [props.request]);
 
   return (
@@ -17,7 +19,7 @@ export default function Row(props) {
       <div>
         <h1>{props.title}</h1>
       </div>
-      <div className="cards flex overflow-x-scroll my-3 ">
+      <div className="cards flex overflow-x-scroll my-3">
         {movies &&
           movies.map((ele) => {
             return (
@@ -26,7 +28,6 @@ export default function Row(props) {
                 star={ele.vote_average}
                 image={ele.poster_path}
                 name={ele?.title || ele?.name || ele?.original_title}
-                date={ele.release_date}
               />
             );
           })}

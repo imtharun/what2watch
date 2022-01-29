@@ -11,9 +11,12 @@ export default function Header() {
       <header className="w-full flex p-2 justify-between mt-[0.25rem]">
         <div className="flex ">
           <div>
-            <h1 className="font-monts hidden md:block md:text-2xl font-semibold mx-2 text-red-400">
-              WHAT2WATCH
-            </h1>
+            <Link to="/movie">
+              <h1 className="font-monts hidden md:block md:text-2xl font-semibold mx-2 text-red-400">
+                WHAT2WATCH
+              </h1>
+            </Link>
+
             <div className="flex itmes-center md:hidden">
               <button onClick={hamHandler}>
                 <svg
@@ -33,28 +36,42 @@ export default function Header() {
               </button>
               {hamActive && (
                 <Modal>
-                  <ul className="z-50 text-lg center rounded-md bg-white fixed p-5 text-center">
-                    <li className="border-b-2 mb-2 mx-2 ">
-                      <Link to="/movie" onClick={hamHandler}>
+                  <ul className="flex flex-col justify-center w-56 h-52 z-50 text-lg rounded-md bg-white p-5 text-center center">
+                    <li className="mb-4 mx-2 ">
+                      <Link
+                        className="border-b-2"
+                        to="/movie"
+                        onClick={hamHandler}
+                      >
                         Movies
                       </Link>
                     </li>
-                    <li className="border-b-2 mb-2 mx-2 ">
-                      <Link to="/tvseries" onClick={hamHandler}>
+                    <li className=" mb-4 mx-2 ">
+                      <Link
+                        className="border-b-2"
+                        to="/tvseries"
+                        onClick={hamHandler}
+                      >
                         Tv series
                       </Link>
                     </li>
-                    <li className="border-b-2 mx-2">
-                      <Link to="/search" onClick={hamHandler}>
+                    <li className=" mx-2">
+                      <Link
+                        className="border-b-2"
+                        to="/search"
+                        onClick={hamHandler}
+                      >
                         Search
                       </Link>
                     </li>
                   </ul>
                 </Modal>
               )}
-              <h1 className="font-monts ml-2 md:hidden text-2xl font-semibold mr-1 text-red-400">
-                W2W
-              </h1>
+              <Link to="/movie">
+                <h1 className="font-monts ml-2 md:hidden text-2xl font-semibold mr-1 text-red-400">
+                  W2W
+                </h1>
+              </Link>
             </div>
           </div>
           <div className="text-white mt-1 hidden md:block">

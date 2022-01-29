@@ -6,6 +6,7 @@ import TvShow from "./components/TvShow";
 import Search from "./components/Search";
 import "./index.css";
 
+
 export default function App() {
   return (
     <Routes>
@@ -13,7 +14,7 @@ export default function App() {
       <Route
         path="/movie"
         element={
-          <main className={`font-monts`}>
+          <main className="font-monts">
             <Header />
             <Movie />
           </main>
@@ -22,7 +23,7 @@ export default function App() {
       <Route
         path="/tvseries"
         element={
-          <main className={`font-monts `}>
+          <main className="font-monts">
             <Header />
             <TvShow />
           </main>
@@ -31,7 +32,7 @@ export default function App() {
       <Route
         path="/search"
         element={
-          <main className={`font-monts `}>
+          <main className="font-monts">
             <Header />
             <Search />
           </main>

@@ -8,7 +8,7 @@ function HamContextProvider(props) {
   const hamHandler = function () {
     setHamActive((prev) => !prev);
   };
-  console.log(props.children);
+
   return (
     <HamContext.Provider value={{ hamActive, hamHandler }}>
       {props.children}

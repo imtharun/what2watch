@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import Row from "./Row";
 
 export default function Search() {
   const [input, setInput] = useState("");
@@ -7,9 +8,13 @@ export default function Search() {
   const changeHandler = function () {
     setInput(inputRef.current.value);
   };
+
   const submitHandler = function (event) {
     event.preventDefault();
+    setInput(input);
   };
+
+  const searchUrl = `/search/movie?api_key=544cc1a83bc6fb204d6f8af527c90773&language=en-US&query=${input}&page=1&include_adult=false`;
 
   return (
     <article className="text-center mt-5">
@@ -22,7 +27,7 @@ export default function Search() {
             value={input}
             onChange={changeHandler}
             name="serch"
-            className="bg-white h-10 px-5 pr-14 rounded-full text-sm focus:outline-none "
+            className="bg-white h-10 w-64 px-5 pr-12 rounded-full text-sm focus:outline-none "
           />
           <button
             type="submit"
@@ -47,6 +52,17 @@ export default function Search() {
           </button>
         </div>
       </form>
+      <section className="">
+        <Row
+          request={input.length === 0 ? "" : searchUrl}
+          title={
+            input.length === 0
+              ? "Movies you might like"
+              : `Movies related to ${input}`
+          }
+          isGrid={true}
+        />
+      </section>
     </article>
   );
 }

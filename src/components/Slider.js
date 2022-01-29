@@ -23,7 +23,7 @@ export default function Slider(props) {
           `https://api.themoviedb.org/3/movie/${movie?.id}/videos?api_key=544cc1a83bc6fb204d6f8af527c90773`
         )
           .then((req) => req.json())
-          .catch((err) => console.log(err));
+          .catch((err) => {});
         const movieArray = data.results;
         movieArray.forEach((ele) => {
           if (
@@ -63,13 +63,11 @@ export default function Slider(props) {
 
       <div className="relative text-white tall:w-[50rem] tall:h-[350px] md:mx-auto overflow-hidden rounded-3xl mt-3">
         {movie?.backdrop_path && (
-          <a href="/">
-            <img
-              className="w-full h-full"
-              src={`https://image.tmdb.org/t/p/original${movie?.backdrop_path}`}
-              alt="Movie Slide"
-            />
-          </a>
+          <img
+            className="w-full h-full"
+            src={`https://image.tmdb.org/t/p/original${movie?.backdrop_path}`}
+            alt="Movie Slide"
+          />
         )}
         <span className="font-bold text-2xl  bottom-5 right-10 absolute">
           {movie?.name || movie?.title}

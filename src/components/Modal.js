@@ -1,11 +1,5 @@
-import React, { useContext } from "react";
-import { HamContext } from "../HamContextProvider";
+import React from "react";
 
 export default function Modal(props) {
-  const { hamActive } = useContext(HamContext);
-  return (
-    <div className={`backdrop-blur-${hamActive ? "3xl" : "none"}`}>
-      {props.children}
-    </div>
-  );
+  return <div className="z-50">{props.children}</div>;
 }
