@@ -8,6 +8,7 @@ export default function Row(props) {
     if (props.request) {
       const fetch = async () => {
         const data = await axios.get(props.request);
+        console.log(data);
         setMovies(data.data.results);
       };
       fetch();

@@ -35,37 +35,39 @@ export default function Header() {
                 </svg>
               </button>
               {hamActive && (
-                <Modal>
-                  <ul className="flex flex-col justify-center w-56 h-52 z-50 text-lg rounded-md bg-white p-5 text-center center">
-                    <li className="mb-4 mx-2 ">
-                      <Link
-                        className="border-b-2"
-                        to="/movie"
-                        onClick={hamHandler}
-                      >
-                        Movies
-                      </Link>
-                    </li>
-                    <li className=" mb-4 mx-2 ">
-                      <Link
-                        className="border-b-2"
-                        to="/tvseries"
-                        onClick={hamHandler}
-                      >
-                        Tv series
-                      </Link>
-                    </li>
-                    <li className=" mx-2">
-                      <Link
-                        className="border-b-2"
-                        to="/search"
-                        onClick={hamHandler}
-                      >
-                        Search
-                      </Link>
-                    </li>
-                  </ul>
-                </Modal>
+                <div className="z-50 bg-white w-56 h-52 flex flex-col justify-center rounded-xl absolute top-1/2 right-1/2 translate-x-1/2 traslate-y-1/2 ring-2 ring-gray-400 backdrop-blur-3xl">
+                  <Modal>
+                    <ul className="text-lg p-5 text-center">
+                      <li className="mb-4">
+                        <Link
+                          className="border-b-2"
+                          to="/movie"
+                          onClick={hamHandler}
+                        >
+                          Movies
+                        </Link>
+                      </li>
+                      <li className="mb-4">
+                        <Link
+                          className="border-b-2"
+                          to="/tvseries"
+                          onClick={hamHandler}
+                        >
+                          Tv series
+                        </Link>
+                      </li>
+                      <li className="">
+                        <Link
+                          className="border-b-2"
+                          to="/search"
+                          onClick={hamHandler}
+                        >
+                          Search
+                        </Link>
+                      </li>
+                    </ul>
+                  </Modal>
+                </div>
               )}
               <Link to="/movie">
                 <h1 className="font-monts ml-2 md:hidden text-2xl font-semibold mr-1 text-red-400">
