@@ -2,7 +2,6 @@
   "name": "what2watch",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://imtharun.github.io/what2watch",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
