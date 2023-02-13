@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/what2watch/static/css/main.08186445.css",
-    "main.js": "/what2watch/static/js/main.825cdc09.js",
-    "index.html": "/what2watch/index.html",
-    "main.08186445.css.map": "/what2watch/static/css/main.08186445.css.map",
-    "main.825cdc09.js.map": "/what2watch/static/js/main.825cdc09.js.map"
+    "main.css": "/static/css/main.08186445.css",
+    "main.js": "/static/js/main.825cdc09.js",
+    "index.html": "/index.html",
+    "main.08186445.css.map": "/static/css/main.08186445.css.map",
+    "main.825cdc09.js.map": "/static/js/main.825cdc09.js.map"
   },
   "entrypoints": [
     "static/css/main.08186445.css",
